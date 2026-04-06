@@ -431,8 +431,7 @@
     <div id="sidebar-overlay" class="sidebar-overlay"></div>
     <nav id="mobile-sidebar" class="mobile-sidebar">
         <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:2rem;">
-            <img src="logo.png"
-                alt="Sur+" style="height:2rem;" />
+            <img src="logo.png" alt="Sur+" style="height:2rem; cursor:pointer;" onclick="navigate('onboarding')" />
             <button onclick="closeSidebar()" style="background:none;border:none;cursor:pointer;padding:0.5rem;"
                 aria-label="Close menu">
                 <span class="material-symbols-outlined" style="color:#191c1d;">close</span>
@@ -469,8 +468,7 @@
         <!-- Header -->
         <header
             style="background:var(--color-primary-container);padding:0 1rem;height:64px;display:flex;align-items:center;position:sticky;top:0;z-index:100;">
-            <img src="logo.png"
-                alt="Sur+" class="top-bar-logo" />
+            <img src="logo.png" alt="Sur+" class="top-bar-logo" />
         </header>
 
         <!-- Split layout -->
@@ -480,19 +478,18 @@
             <section class="split-left hide-sm"
                 style="width:50%;display:flex;flex-direction:column;justify-content:space-between;padding:4rem;">
                 <img class="overlay-img"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQWkYwHslXGGwLA9oSDkf-lgdkGd58VosCVJ0XT_vZvfW592kniUEiN_WpgWpcp25QbjM0zuF_XNenn_bOplfuSkN8QejTVu4FjfXYah9wneIvQDFYk3Wtj-QiHZ9NzbKnemytOL50kJ-G-PIz_Nmdda74WM30aj1OFF7qZ7xyhhAKt2a3Z5nWZTweHqugZrATMcC1o9X-ZYwDvZh7cPvhXcFfwSZlVKhJWZsD5Y36RvPbcCEENGQDA8Y7HxgFwMmETO4GE0uJKoI"
+                    src="C:\Users\raisa\.gemini\antigravity\brain\5f03cd8f-2df3-406f-9844-5c12487484d9\premium_surplus_food_1775492711195.png"
                     alt="" />
                 <div class="overlay-gradient"></div>
                 <div style="position:relative;z-index:2;">
                     <h1
                         style="font-family:var(--font-headline);font-size:3.5rem;font-weight:800;color:white;line-height:1.1;letter-spacing:-0.02em;margin-bottom:1.5rem;">
-                        Dubai's finest surplus,<br />
-                        <span style="color:var(--color-secondary-fixed);">curated for you.</span>
+                        Rescue premium food,<br />
+                        <span style="color:var(--color-secondary-fixed);">protect the planet.</span>
                     </h1>
                     <p
                         style="color:var(--color-on-primary-container);font-size:1.125rem;max-width:380px;line-height:1.6;">
-                        Connecting premium surplus from Dubai's best kitchens with those who value taste and
-                        sustainability.
+                        Join the movement to enjoy exceptional meals from top kitchens while eliminating food waste.
                     </p>
                 </div>
                 <div class="stat-glass" style="position:relative;z-index:2;">
@@ -563,13 +560,8 @@
                         </button>
                     </div>
 
-                    <!-- Continue CTA -->
-                    <div style="margin-top:1.5rem;">
-                        <button class="btn btn-secondary-green"
-                            style="width:100%;height:56px;font-size:1rem;border-radius:var(--radius-xl);"
-                            onclick="handleRoleConfirm()">
-                            Continue
-                        </button>
+                    <!-- Continue CTA Removed -->
+                    <div style="margin-top:1.5rem; display:none;">
                     </div>
 
                     <!-- Footer -->
@@ -607,7 +599,8 @@
         <header class="top-bar" style="justify-content:space-between;">
             <div style="display:flex;align-items:center;gap:1rem;">
                 <!-- Hamburger removed -->
-                <img src="logo.png" alt="Sur+" class="top-bar-logo" />
+                <img src="logo.png" alt="Sur+" class="top-bar-logo" style="cursor:pointer;"
+                    onclick="navigate('onboarding')" />
             </div>
             <!-- Desktop nav -->
             <nav class="hide-sm" style="display:flex;align-items:center;gap:0.5rem;">
@@ -635,7 +628,7 @@
             <!-- Search -->
             <div style="margin-top:1rem;" class="search-wrapper">
                 <span class="material-symbols-outlined search-icon">search</span>
-                <input class="input-field" type="text" placeholder="Search groceries or bakeries…"
+                <input class="input-field" type="text" placeholder="Search groceries or food items…"
                     onkeydown="handleSearch(event)" />
             </div>
 
@@ -688,8 +681,7 @@
                     </button>
                 </div>
                 <div class="map-section">
-                    <img src="map.png"
-                        alt="Map" style="width:100%;height:100%;object-fit:cover;" />
+                    <img src="map.png" alt="Map" style="width:100%;height:100%;object-fit:cover;" />
                     <!-- Price pins -->
                     <div class="map-pin" style="top:25%;left:33%;">
                         <div class="map-pin-label" style="animation:pulse 2s ease infinite;">AED 5.00</div>
@@ -873,8 +865,8 @@
                 <button class="back-btn" onclick="navigate('browse')" aria-label="Back">
                     <span class="material-symbols-outlined">arrow_back</span>
                 </button>
-                <img src="logo.png"
-                    alt="Sur+" class="top-bar-logo" />
+                <img src="logo.png" alt="Sur+" class="top-bar-logo" style="cursor:pointer;"
+                    onclick="navigate('onboarding')" />
             </div>
             <div style="display:flex;align-items:center;gap:0.5rem;">
                 <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
@@ -993,8 +985,7 @@
                         <div style="display:flex;flex-direction:column;gap:1rem;">
                             <div
                                 style="position:relative;border-radius:var(--radius-3xl);overflow:hidden;aspect-ratio:16/9;">
-                                <img src="map.png"
-                                    alt="Map" style="width:100%;height:100%;object-fit:cover;" />
+                                <img src="map.png" alt="Map" style="width:100%;height:100%;object-fit:cover;" />
                                 <div
                                     style="position:absolute;inset:0;background:linear-gradient(to top,rgba(13,27,42,0.4),transparent);">
                                 </div>
@@ -1068,8 +1059,8 @@
                 <button class="back-btn" onclick="navigate('product')" aria-label="Back">
                     <span class="material-symbols-outlined">arrow_back</span>
                 </button>
-                <img src="logo.png"
-                    alt="Sur+" class="top-bar-logo" />
+                <img src="logo.png" alt="Sur+" class="top-bar-logo" style="cursor:pointer;"
+                    onclick="navigate('onboarding')" />
             </div>
             <div style="display:flex;align-items:center;gap:0.75rem;">
                 <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
@@ -1254,7 +1245,8 @@
         <header class="top-bar" style="justify-content:space-between;">
             <div style="display:flex;align-items:center;gap:1rem;">
                 <!-- Hamburger removed -->
-                <img src="logo.png" alt="Sur+" class="top-bar-logo" />
+                <img src="logo.png" alt="Sur+" class="top-bar-logo" style="cursor:pointer;"
+                    onclick="navigate('onboarding')" />
             </div>
             <!-- Desktop nav -->
             <nav class="hide-sm" style="display:flex;align-items:center;gap:0.5rem;">
@@ -1262,10 +1254,17 @@
                 <a class="top-bar-nav-link active" onclick="navigate('impact')" data-nav-page="impact">Impact</a>
                 <a class="top-bar-nav-link" onclick="showToast('Account coming soon!')">Account</a>
             </nav>
-            <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
-                <div class="toggle-bg"></div>
-                <span class="toggle-label resident">C</span>
-                <span class="toggle-label retailer">R</span>
+            <div style="display:flex;align-items:center;gap:0.5rem;">
+                <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
+                    <div class="toggle-bg"></div>
+                    <span class="toggle-label resident">C</span>
+                    <span class="toggle-label retailer">R</span>
+                </div>
+                <button class="top-bar-icon" style="position:relative;" aria-label="Notifications"
+                    onclick="showToast('No new notifications.')">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <div class="notif-badge"></div>
+                </button>
             </div>
         </header>
 
@@ -1349,7 +1348,7 @@
                     </div>
                     <p
                         style="text-align:center;font-size:0.6875rem;font-weight:700;color:var(--color-on-surface-variant);font-style:italic;">
-                        7.5 kg until Epic — keep going!</p>
+                        7.5 kg until Epic. Keep going!</p>
                 </div>
             </section>
 
@@ -1464,13 +1463,13 @@
                     style="background:var(--color-primary-container);color:white;padding:1.5rem;border-radius:var(--radius-xl);display:flex;flex-direction:column;justify-content:space-between;">
                     <div>
                         <span
-                            style="color:var(--color-secondary-fixed);font-weight:700;font-size:0.75rem;letter-spacing:0.05em;">Global
-                            community</span>
+                            style="color:var(--color-secondary-fixed);font-weight:700;font-size:0.75rem;letter-spacing:0.05em;">Your
+                            Circle Impact</span>
                         <h3
                             style="font-family:var(--font-headline);font-size:1.25rem;font-weight:700;margin-top:0.375rem;line-height:1.3;">
-                            Together, we've saved a Blue Whale.</h3>
-                        <p style="color:rgba(255,255,255,0.6);font-size:0.75rem;margin-top:0.75rem;line-height:1.6;">The
-                            Sur+ community has collectively diverted 190,000 kg of food waste this year.</p>
+                            You and your friends have saved a Blue Whale.</h3>
+                        <p style="color:rgba(255,255,255,0.6);font-size:0.75rem;margin-top:0.75rem;line-height:1.6;">You
+                            and your friends have collectively diverted 190,000 kg of food waste this year.</p>
                     </div>
                     <div style="margin-top:2rem;">
                         <div
@@ -1516,12 +1515,20 @@
         <header class="top-bar" style="justify-content:space-between;">
             <div style="display:flex;align-items:center;gap:1rem;">
                 <!-- Hamburger removed -->
-                <img src="logo.png" alt="Sur+" class="top-bar-logo" />
+                <img src="logo.png" alt="Sur+" class="top-bar-logo" style="cursor:pointer;"
+                    onclick="navigate('onboarding')" />
             </div>
-            <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
-                <div class="toggle-bg"></div>
-                <span class="toggle-label resident">C</span>
-                <span class="toggle-label retailer">R</span>
+            <div style="display:flex;align-items:center;gap:0.5rem;">
+                <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
+                    <div class="toggle-bg"></div>
+                    <span class="toggle-label resident">C</span>
+                    <span class="toggle-label retailer">R</span>
+                </div>
+                <button class="top-bar-icon" style="position:relative;" aria-label="Notifications"
+                    onclick="showToast('No new notifications.')">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <div class="notif-badge"></div>
+                </button>
             </div>
         </header>
 
@@ -1539,7 +1546,8 @@
                 </div>
             </div>
             <nav style="display:flex;flex-direction:column;gap:0.25rem;">
-                <a class="sidebar-nav-item active" onclick="navigate('retailer')"><span class="material-symbols-outlined">dashboard</span>
+                <a class="sidebar-nav-item active" onclick="navigate('retailer')"><span
+                        class="material-symbols-outlined">dashboard</span>
                     Dashboard</a>
                 <a class="sidebar-nav-item" onclick="showToast('Listings coming soon.')"><span
                         class="material-symbols-outlined">list_alt</span> Listings</a>
@@ -1600,9 +1608,10 @@
                         <svg width="80" height="80">
                             <circle cx="40" cy="40" r="34" fill="transparent" stroke="rgba(88,67,41,0.1)"
                                 stroke-width="8" />
-                            <circle cx="40" cy="40" r="34" fill="transparent"
+                            <circle id="efficiency-circle" cx="40" cy="40" r="34" fill="transparent"
                                 stroke="var(--color-on-tertiary-fixed-variant)" stroke-width="8"
-                                stroke-dasharray="213.6" stroke-dashoffset="34.2" stroke-linecap="round" />
+                                stroke-dasharray="213.6" stroke-dashoffset="213.6" stroke-linecap="round"
+                                style="transition: stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1);" />
                         </svg>
                         <div
                             style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-headline);font-size:1.25rem;font-weight:900;color:var(--color-on-tertiary-fixed-variant);">
@@ -1652,6 +1661,14 @@
                                     <span style="font-weight:700;color:var(--color-on-surface);">AED 12.50</span>
                                 </div>
                                 <div
+                                    style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.375rem;">
+                                    <span
+                                        style="font-size:0.75rem;font-weight:700;color:var(--color-on-surface-variant);">Inventory
+                                        Sold</span>
+                                    <span
+                                        style="font-size:0.75rem;font-weight:800;color:var(--color-secondary);">6/8</span>
+                                </div>
+                                <div
                                     style="width:100%;background:#f1f5f9;height:6px;border-radius:999px;overflow:hidden;">
                                     <div style="background:#10b981;height:100%;width:75%;border-radius:999px;"></div>
                                 </div>
@@ -1680,8 +1697,16 @@
                                     <span style="font-weight:700;color:var(--color-on-surface);">AED 24.00</span>
                                 </div>
                                 <div
+                                    style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.375rem;">
+                                    <span
+                                        style="font-size:0.75rem;font-weight:700;color:var(--color-on-surface-variant);">Inventory
+                                        Sold</span>
+                                    <span
+                                        style="font-size:0.75rem;font-weight:800;color:var(--color-secondary);">3/5</span>
+                                </div>
+                                <div
                                     style="width:100%;background:#f1f5f9;height:6px;border-radius:999px;overflow:hidden;">
-                                    <div style="background:#10b981;height:100%;width:50%;border-radius:999px;"></div>
+                                    <div style="background:#10b981;height:100%;width:60%;border-radius:999px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1701,14 +1726,14 @@
                                 style="color:var(--color-secondary);">bar_chart</span>
                             7-Day Waste Reduction
                         </h3>
-                        <div class="bar-chart">
-                            <div class="bar-chart-bar" data-bar-h="40%"></div>
-                            <div class="bar-chart-bar" data-bar-h="60%"></div>
-                            <div class="bar-chart-bar" data-bar-h="50%"></div>
-                            <div class="bar-chart-bar" data-bar-h="80%"></div>
-                            <div class="bar-chart-bar" data-bar-h="70%"></div>
-                            <div class="bar-chart-bar" data-bar-h="95%"></div>
-                            <div class="bar-chart-bar" data-bar-h="85%"></div>
+                        <div class="bar-chart" id="retailer-bar-chart">
+                            <div class="bar-chart-bar" data-bar-h="40%" style="position:relative; height:0;"><span style="position:absolute; width:100%; top:-1.5rem; text-align:center; font-size:0.75rem; font-weight:700; color:var(--color-on-surface-variant);">40%</span></div>
+                            <div class="bar-chart-bar" data-bar-h="60%" style="position:relative; height:0;"><span style="position:absolute; width:100%; top:-1.5rem; text-align:center; font-size:0.75rem; font-weight:700; color:var(--color-on-surface-variant);">60%</span></div>
+                            <div class="bar-chart-bar" data-bar-h="50%" style="position:relative; height:0;"><span style="position:absolute; width:100%; top:-1.5rem; text-align:center; font-size:0.75rem; font-weight:700; color:var(--color-on-surface-variant);">50%</span></div>
+                            <div class="bar-chart-bar" data-bar-h="80%" style="position:relative; height:0;"><span style="position:absolute; width:100%; top:-1.5rem; text-align:center; font-size:0.75rem; font-weight:700; color:var(--color-on-surface-variant);">80%</span></div>
+                            <div class="bar-chart-bar" data-bar-h="70%" style="position:relative; height:0;"><span style="position:absolute; width:100%; top:-1.5rem; text-align:center; font-size:0.75rem; font-weight:700; color:var(--color-on-surface-variant);">70%</span></div>
+                            <div class="bar-chart-bar" data-bar-h="95%" style="position:relative; height:0;"><span style="position:absolute; width:100%; top:-1.5rem; text-align:center; font-size:0.75rem; font-weight:700; color:var(--color-on-surface-variant);">95%</span></div>
+                            <div class="bar-chart-bar" data-bar-h="85%" style="position:relative; height:0;"><span style="position:absolute; width:100%; top:-1.5rem; text-align:center; font-size:0.75rem; font-weight:700; color:var(--color-on-surface-variant);">85%</span></div>
                         </div>
                         <div style="display:flex;justify-content:space-between;margin-top:0.75rem;">
                             <span class="label-sm" style="color:#94a3b8;">Mon</span>

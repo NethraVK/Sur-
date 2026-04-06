@@ -57,7 +57,8 @@ const pageInitFns = {
     renderCartQty();
   },
   retailer: () => {
-    animateBars();
+    // Scroll animations are now handled by an IntersectionObserver
+    setupScrollAnimations();
   },
 };
 
@@ -66,6 +67,7 @@ function selectRole(el) {
   document.querySelectorAll('.role-card').forEach(c => c.classList.remove('selected'));
   el.classList.add('selected');
   selectedRole = el.dataset.role;
+  setTimeout(handleRoleConfirm, 100);
 }
 
 function handleRoleConfirm() {
@@ -146,14 +148,50 @@ function animateCounters() {
 
 /* ── Bar Chart Animation ────────────────────────────── */
 function animateBars() {
-  const bars = document.querySelectorAll('[data-bar-h]');
+  const bars = document.querySelectorAll('#retailer-bar-chart .bar-chart-bar');
   bars.forEach((bar, i) => {
     bar.style.height = '0%';
     setTimeout(() => {
-      bar.style.transition = 'height 500ms cubic-bezier(0.4,0,0.2,1)';
+      bar.style.transition = 'height 800ms cubic-bezier(0.4, 0, 0.2, 1)';
       bar.style.height = bar.dataset.barH;
-    }, i * 60 + 100);
+    }, i * 80 + 100);
   });
+}
+
+function animateEfficiencyCircle() {
+  const circle = document.getElementById('efficiency-circle');
+  if (circle) {
+    // Reveal to 84% (stroke-dashoffset 34.2)
+    circle.style.strokeDashoffset = '34.2';
+  }
+}
+
+/* ── Scroll Observer for Animations ─────────────────── */
+function setupScrollAnimations() {
+  const options = {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (entry.target.id === 'retailer-bar-chart') {
+          animateBars();
+          observer.unobserve(entry.target);
+        } else if (entry.target.id === 'efficiency-circle') {
+          animateEfficiencyCircle();
+          observer.unobserve(entry.target);
+        }
+      }
+    });
+  }, options);
+
+  const barChart = document.getElementById('retailer-bar-chart');
+  const efficiencyCircle = document.getElementById('efficiency-circle');
+
+  if (barChart) observer.observe(barChart);
+  if (efficiencyCircle) observer.observe(efficiencyCircle);
 }
 
 /* ── Shimmer on hover (collectible cards) ───────────── */
