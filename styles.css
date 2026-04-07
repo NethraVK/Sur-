@@ -265,6 +265,9 @@ body {
   z-index: 10;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  /* Add padding here to handle the fixed navs/headers */
+  padding-top: var(--nav-h);
+  padding-bottom: var(--bottom-h);
 }
 .page.active {
   opacity: 1;
@@ -275,8 +278,8 @@ body {
 }
 
 .page-content {
-  padding-top: calc(var(--nav-h) + 1rem);
-  padding-bottom: calc(var(--bottom-h) + 1rem);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   max-width: 48rem;
   margin: 0 auto;
   padding-left: 1rem;
