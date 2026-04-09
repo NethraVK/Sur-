@@ -126,6 +126,7 @@
   /* Spacing */
   --nav-h:     4rem;   /* 64px top nav */
   --bottom-h:  5rem;   /* 80px bottom nav */
+  --sticky-cta-h: 11rem;
 
   /* Transitions */
   --transition-base: 0.2s ease;
@@ -304,6 +305,10 @@ body {
   margin: 0 auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.page-with-sticky-cta .scrollable-page {
+  padding-bottom: calc(var(--bottom-h) + var(--sticky-cta-h) + env(safe-area-inset-bottom));
 }
 
 /* ── Liquid Silk Gradient ───────────────────────────────── */
@@ -590,11 +595,11 @@ body {
 /* ── Checkout Sticky Footer ─────────────────────────────── */
 .checkout-footer {
   position: fixed;
-  bottom: 0;
+  bottom: calc(var(--bottom-h) + env(safe-area-inset-bottom));
   left: 0;
   right: 0;
-  z-index: 90;
-  padding: 1rem 1rem calc(1rem + env(safe-area-inset-bottom));
+  z-index: 95;
+  padding: 1rem;
   background: rgba(255,255,255,0.9);
   backdrop-filter: blur(16px);
   border-top: 1px solid rgba(196,198,204,0.2);

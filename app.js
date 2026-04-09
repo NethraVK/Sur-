@@ -39,8 +39,13 @@ function navigate(pageKey, options = {}) {
 }
 
 function updateNavActive(pageKey) {
+  const navPageKey = {
+    product: 'browse',
+    checkout: 'browse',
+  }[pageKey] || pageKey;
+
   document.querySelectorAll('[data-nav-page]').forEach(el => {
-    el.classList.toggle('active', el.dataset.navPage === pageKey);
+    el.classList.toggle('active', el.dataset.navPage === navPageKey);
   });
 }
 

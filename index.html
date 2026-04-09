@@ -835,7 +835,7 @@
     <!-- ═══════════════════════════════════════════════════
      PAGE 3: PRODUCT DETAIL
 ═════════════════════════════════════════════════════ -->
-    <div id="page-product" class="page">
+    <div id="page-product" class="page page-with-sticky-cta">
 
         <!-- Top Bar -->
         <header class="top-bar" style="justify-content:space-between;">
@@ -846,6 +846,11 @@
                 <img src="logo.png" alt="Sur+" class="top-bar-logo" style="cursor:pointer;"
                     onclick="navigate('onboarding')" />
             </div>
+            <nav class="hide-sm" style="display:flex;align-items:center;gap:0.5rem;">
+                <a class="top-bar-nav-link active" onclick="navigate('browse')" data-nav-page="browse">Home</a>
+                <a class="top-bar-nav-link" onclick="navigate('impact')" data-nav-page="impact">Impact</a>
+                <a class="top-bar-nav-link" onclick="showToast('Account coming soon!')">Account</a>
+            </nav>
             <div style="display:flex;align-items:center;gap:0.5rem;">
                 <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
                     <div class="toggle-bg"></div>
@@ -859,8 +864,7 @@
         </header>
 
         <!-- Main -->
-        <main class="scrollable-page"
-            style="max-width:960px;margin:0 auto;padding-left:1rem;padding-right:1rem;padding-bottom:120px;">
+        <main class="scrollable-page" style="max-width:960px;margin:0 auto;padding-left:1rem;padding-right:1rem;">
 
             <!-- Desktop two-col layout -->
             <div style="display:grid;grid-template-columns:1fr;gap:2rem;margin-top:1rem;">
@@ -1023,13 +1027,28 @@
             </div>
         </div>
 
+        <nav class="bottom-nav">
+            <a data-nav-page="browse" onclick="navigate('browse')" class="active">
+                <span class="material-symbols-outlined icon-fill">home</span>
+                <span class="label-sm">Home</span>
+            </a>
+            <a data-nav-page="impact" onclick="navigate('impact')">
+                <span class="material-symbols-outlined">eco</span>
+                <span class="label-sm">Impact</span>
+            </a>
+            <a onclick="showToast('Account coming soon!')">
+                <span class="material-symbols-outlined">person</span>
+                <span class="label-sm">Account</span>
+            </a>
+        </nav>
+
     </div><!-- /page-product -->
 
 
     <!-- ═══════════════════════════════════════════════════
      PAGE 4: SMART CHECKOUT
 ═════════════════════════════════════════════════════ -->
-    <div id="page-checkout" class="page">
+    <div id="page-checkout" class="page page-with-sticky-cta">
 
         <!-- Top Bar -->
         <header class="top-bar" style="justify-content:space-between;">
@@ -1040,6 +1059,11 @@
                 <img src="logo.png" alt="Sur+" class="top-bar-logo" style="cursor:pointer;"
                     onclick="navigate('onboarding')" />
             </div>
+            <nav class="hide-sm" style="display:flex;align-items:center;gap:0.5rem;">
+                <a class="top-bar-nav-link active" onclick="navigate('browse')" data-nav-page="browse">Home</a>
+                <a class="top-bar-nav-link" onclick="navigate('impact')" data-nav-page="impact">Impact</a>
+                <a class="top-bar-nav-link" onclick="showToast('Account coming soon!')">Account</a>
+            </nav>
             <div style="display:flex;align-items:center;gap:0.75rem;">
                 <div class="persona-toggle" onclick="togglePersona()" data-role="resident" title="Toggle persona">
                     <div class="toggle-bg"></div>
@@ -1051,8 +1075,7 @@
         </header>
 
         <!-- Main -->
-        <main class="scrollable-page"
-            style="max-width:640px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;padding-bottom:120px;">
+        <main class="scrollable-page" style="max-width:640px;margin:0 auto;padding-left:1.5rem;padding-right:1.5rem;">
 
             <!-- Order Summary -->
             <section style="margin-top:1rem;">
@@ -1210,6 +1233,21 @@
                     Secure encrypted transaction by Sur+ Vault</p>
             </div>
         </div>
+
+        <nav class="bottom-nav">
+            <a data-nav-page="browse" onclick="navigate('browse')" class="active">
+                <span class="material-symbols-outlined icon-fill">home</span>
+                <span class="label-sm">Home</span>
+            </a>
+            <a data-nav-page="impact" onclick="navigate('impact')">
+                <span class="material-symbols-outlined">eco</span>
+                <span class="label-sm">Impact</span>
+            </a>
+            <a onclick="showToast('Account coming soon!')">
+                <span class="material-symbols-outlined">person</span>
+                <span class="label-sm">Account</span>
+            </a>
+        </nav>
 
     </div><!-- /page-checkout -->
 
